@@ -356,6 +356,31 @@ input.t:focus,textarea.t:focus,select.t:focus{outline:2px solid #c6ad78;outline-
     font-size: 15px;
   }
 }
+    /* Imagen en el primer segmento de las páginas internas */
+.intro-con-imagen {
+    display: grid;
+    grid-template-columns: 1.4fr 0.8fr;
+    gap: 30px;
+    align-items: center;
+}
+
+.intro-con-imagen img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: contain;
+    display: block;
+}
+
+@media (max-width: 640px) {
+    .intro-con-imagen {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .intro-con-imagen img {
+        max-height: 220px;
+    }
+}
 </style>
 </head>
 <body>
@@ -388,11 +413,22 @@ input.t:focus,textarea.t:focus,select.t:focus{outline:2px solid #c6ad78;outline-
   <a href="index.html#contacto">Contacto</a>
 </nav>
 <main>
-<div class="page-hero">
+  
+<div class="page-hero intro-con-imagen">
+  <div class="intro-texto">
   <p class="eyebrow">Próceres</p>
   <h2>Próceres argentinos y Masonería</h2>
   <p class="lead">La Masonería ha formado parte de distintos procesos de la historia argentina. En esta sección evocamos a figuras cuya trayectoria mantuvo vínculos documentados con la institución, atendiendo a su pertenencia, sus funciones y su participación en la vida masónica.</p>
   <p class="lead">Nuestro propósito no es reconstruir sus biografías, sino destacar ese vínculo y su lugar en la memoria histórica, con respeto por los hechos y las fuentes disponibles.</p>
+</div>
+
+    <div class="intro-imagen-contenedor">
+    <img
+      class="intro-imagen"
+      src="imagenes/cuadrosm.png"
+      alt="Próceres argentinos y Masonería"
+    >
+  </div>
 </div>
 
 <div class="sec">
