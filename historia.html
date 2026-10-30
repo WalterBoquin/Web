@@ -312,6 +312,31 @@ input.t:focus,textarea.t:focus,select.t:focus{outline:2px solid #c6ad78;outline-
     font-size: 15px;
   }
 }
+    /* Imagen en el primer segmento de las páginas internas */
+.intro-con-imagen {
+    display: grid;
+    grid-template-columns: 1.4fr 0.8fr;
+    gap: 30px;
+    align-items: center;
+}
+
+.intro-con-imagen img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: contain;
+    display: block;
+}
+
+@media (max-width: 640px) {
+    .intro-con-imagen {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .intro-con-imagen img {
+        max-height: 220px;
+    }
+}
 </style>
 </head>
 <body>
@@ -344,10 +369,21 @@ input.t:focus,textarea.t:focus,select.t:focus{outline:2px solid #c6ad78;outline-
   <a href="index.html#contacto">Contacto</a>
 </nav>
 <main>
-<div class="page-hero">
+  
+<div class="page-hero intro-con-imagen">
+  <div class="intro-texto">
   <p class="eyebrow">Historia</p>
   <h2>De los gremios de constructores a la Masonería moderna</h2>
   <p class="lead">Un recorrido por los antecedentes y los acontecimientos más relevantes de una tradición con más de tres siglos de existencia organizada.</p>
+  </div>
+
+    <div class="intro-imagen-contenedor">
+    <img
+      class="intro-imagen"
+      src="imagenes/historia.png"
+      alt="Próceres argentinos y Masonería"
+    >
+  </div>
 </div>
 
 <!-- REVISAR: contrastar fechas y datos con bibliografía antes de publicar -->
